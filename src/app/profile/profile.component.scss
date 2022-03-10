@@ -1,0 +1,67 @@
+.profile-wrapper {
+  width: 100vw;
+  height: 100vh;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.profile-header {
+  width: 100vw;
+  height: 74px;
+  background-color: #6a62d2;
+  color: white;
+  padding: 0 22px;
+}
+
+.profile-footer {
+  width: 100vw;
+  height: 56px;
+  background-color: #333333;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bi-person-circle {
+  width: 52px;
+  height: 52px;
+}
+
+.main-profile-icon {
+  width: 140px;
+  height: 140px;
+  fill: #adb5bd;
+}
+
+.btn-log-out {
+  background-color: #f8f9fa;
+  color: #333333;
+}
+
+.profile-name {
+  font-weight: 600;
+  font-size: 18px;
+  letter-spacing: 1px;
+}
+
+.vertical-border {
+  border-left: #adb5bd solid 1px;
+}
+
+.border-bottom {
+  border-bottom: #adb5bd solid 1px;
+}
+
+.min-width-310 {
+  min-width: 310px;
+}
+
+.py-14px {
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+
