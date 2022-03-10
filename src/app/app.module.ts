@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { FlexLayoutModule } from "@angular/flex-layout";
 import { ProfileComponent } from './profile/profile.component';
 import { HttpClientModule } from "@angular/common/http";
+import { FormsModule } from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -19,6 +19,7 @@ import { HttpClientModule } from "@angular/common/http";
     AppRoutingModule,
     FlexLayoutModule,
     HttpClientModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from "@angular/router";
 
 @Component({
   selector: 'app-profile',
@@ -6,10 +7,26 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./profile.component.scss']
 })
 export class ProfileComponent implements OnInit {
+  user: any;
 
-  constructor() { }
+  constructor(private router: Router) {
+    this.getFromCookies();
+  }
 
   ngOnInit(): void {
   }
 
+  getFromCookies(): void {
+    if(document.cookie.includes("userObject=")) {
+      console.log(document.cookie);
+      const cookiesString: any = document.cookie.split("userObject=").pop();
+      this.user = JSON.parse(cookiesString);
+      console.log(document.cookie.split("userObject=")[0]);
+    }
+  }
+
+  logOut(): void {
+    document.cookie = document.cookie.split("userObject=")[0];
+    this.router.navigate(['']);
+  }
 }

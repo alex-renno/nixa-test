@@ -1,23 +1,26 @@
 <div class="login-wrapper" fxLayout="row" fxLayoutAlign="center center">
-<div class="form-container">
-  <h3 class="pb-0 pt-2">
-    SIGN IN TO YOUR ACCOUNT
-  </h3>
-  <form>
-    <div class="form-group mt-4">
-      <input type="email" class="form-control input-field" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+  <div class="form-container">
+    <h3 class="pb-0 pt-2">
+      SIGN IN TO YOUR ACCOUNT
+    </h3>
+    <form #form="ngForm" (ngSubmit)="onSubmit(form)">
+      <div class="form-group mt-4">
+        <input type="text" class="form-control input-field" [(ngModel)]="username" name="username" placeholder="Username">
+      </div>
+      <div *ngIf="userNotFound" class="error">
+        This user doesn't exist
+      </div>
+      <div class="form-group my-3">
+        <input type="password" class="form-control input-field"  placeholder="Password">
+      </div>
+      <div class="form-check">
+        <input type="checkbox" class="form-check-input check-box" id="checkBox">
+        <label class="form-check-label check-box-label" for="checkBox">Keep me signed in</label>
+      </div>
+      <button type="submit" class="btn btn-primary btn-sign-in">SIGN IN</button>
+    </form>
+    <div class="forgot-password">
+        <a href="#" class="form-text text-muted">Forgot your password?</a>
     </div>
-    <div class="form-group my-3">
-      <input type="password" class="form-control input-field" id="exampleInputPassword1" placeholder="Password">
-    </div>
-    <div class="form-check">
-      <input type="checkbox" class="form-check-input check-box" id="exampleCheck1">
-      <label class="form-check-label check-box-label" for="exampleCheck1">Keep me signed in</label>
-    </div>
-    <button type="submit" class="btn btn-primary btn-sign-in" (click)="getUsers()">SIGN IN</button>
-  </form>
-  <div class="forgot-password">
-      <a href="#" class="form-text text-muted">Forgot your password?</a>
   </div>
-</div>
 </div>
