@@ -18,10 +18,8 @@ export class ProfileComponent implements OnInit {
 
   getFromCookies(): void {
     if(document.cookie.includes("userObject=")) {
-      console.log(document.cookie);
       const cookiesString: any = document.cookie.split("userObject=").pop();
       this.user = JSON.parse(cookiesString);
-      console.log(document.cookie.split("userObject=")[0]);
     }
   }
 
